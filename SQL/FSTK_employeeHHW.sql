@@ -61,3 +61,48 @@ ROLLBACK TO sp1;
 COMMIT;
 SELECT getEmpName('E101') AS EmpName;
 SELECT getEmpName('E104') AS EmpName;
+
+CREATE TABLE Department (
+    deptcode INT PRIMARY KEY,
+    deptname VARCHAR(100) NOT NULL,
+    empId VARCHAR(10),
+    FOREIGN KEY (empId)
+        REFERENCES Employee(empId)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+INSERT INTO department (deptcode, deptname, empId) VALUES
+(101, 'Information Technology', 'E101'),
+(102, 'Human Resources', 'E102'),
+(103, 'Sales Department', 'E103'),
+(104, 'Finance Department', 'E104'),
+(105, 'Administration', 'E105');
+
+SELECT e.empId, e.empName, e.dept, d.deptname
+FROM employee e
+INNER JOIN department d
+ON e.empId = d.empId;
+
+SELECT e.empName, d.deptname
+FROM employee e
+JOIN department d
+ON e.empId = d.empId;
+
+SELECT e.*
+FROM employee e
+JOIN department d
+ON e.empId = d.empId
+WHERE d.deptname = 'Information Technology';
+
+SELECT e.empName, e.salary, d.deptname
+FROM employee e
+JOIN department d
+ON e.empId = d.empId
+WHERE e.salary > 50000;
+
+SELECT * FROM employee;
+SELECT * FROM department;
+
+
+
+
