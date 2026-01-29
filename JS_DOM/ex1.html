@@ -1,0 +1,16 @@
+enter 1st number:<input id="num1" type="number"></input><br>
+enter 2nd number:<input id="num2" type="number"></input><br>
+
+<button onclick="add()">Add</button>
+<p id="result">Result :</p>
+<script>
+    
+    var a=document.getElementById("num1");
+    var b=document.getElementById("num2");
+    var result=document.getElementById("result")
+        function add(){
+        var sum = Number(a.value) + Number(b.value);
+        //console.log(sum);
+        result.textContent = "Result : " + sum;
+    }
+</script>

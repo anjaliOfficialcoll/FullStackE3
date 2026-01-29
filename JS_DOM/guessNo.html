@@ -1,0 +1,41 @@
+<!-- //guess no
+//input box user will enter a number between 1 to 10
+//if enter no ==random  -->
+
+<h1>Guess a number between 1 to 10</h1>
+<input id="userinput" type="number">
+<button onclick="checkGuess()">Guess</button>
+<p id="result">right/wrong</p>
+
+<p id="score">Your score is :</p>
+
+<script>
+    var userinput=document.getElementById("userinput");
+    var score=document.getElementById("score");
+    var result=document.getElementById("result");
+    
+    var randomNo=Math.floor(Math.random()*10)+1 ;
+    var tScore=10;
+    function checkGuess(){
+        var ui=userinput.value;
+        if(ui==randomNo){
+            score++;
+           // alert("you guess right no!! Your score is "+score);
+           console.log("right guess");
+           result.textContent="right guess";
+            
+
+
+        }else{
+            //alert("Wrong guess!! The correct no is "+randomNo+". Your score is "+score);
+            tScore--;
+           
+            score.textContent="Score:"+tScore;
+            console.log("wrong guess");
+             result.textContent="the correct no is:"+randomNo;
+            
+        }
+        
+    }
+
+</script>
