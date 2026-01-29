@@ -1,6 +1,6 @@
-function add(){
-    var a=56;
-    var b=34;
+function add(a,b){
+    // var a=56;
+    // var b=34;
     console.log(a+b);
 }
-add();
+add(10,20);

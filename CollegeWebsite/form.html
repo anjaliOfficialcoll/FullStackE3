@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form class="reg-form" action="#" method="post" enctype="multipart/form-data">
+
+    <h1>Student Registration Form</h1>
+
+    <!-- Personal Information -->
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label>
+            Full Name:
+            <input type="text" name="name" placeholder="Enter your name" required>
+        </label>
+
+        <label>
+            Email:
+            <input type="email" name="email" placeholder="Enter your email" required>
+        </label>
+
+        <label>
+            Phone:
+            <input type="tel" name="phone" placeholder="Enter phone number" pattern="[0-9]{10}" required>
+        </label>
+
+        <label>Gender:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+
+        <label>
+            Date of Birth:
+            <input type="date" name="dob" required>
+        </label>
+    </fieldset>
+
+    <!-- Contact Information -->
+    <fieldset>
+        <legend>Contact Information</legend>
+
+        <label>
+            Address:
+            <input type="text" name="address" placeholder="Street address" required>
+        </label>
+
+        <label>
+            City:
+            <input type="text" name="city" required>
+        </label>
+
+        <label>
+            State:
+            <input type="text" name="state" required>
+        </label>
+
+        <label>
+            Postal Code:
+            <input type="text" name="postal" required>
+        </label>
+
+        <label>
+            Country:
+            <input type="text" name="country" required>
+        </label>
+    </fieldset>
+
+    <!-- Academic Information -->
+    <fieldset>
+        <legend>Academic Information</legend>
+
+        <label>
+            Program:
+            <select name="program" required>
+                <option value="" disabled selected>Select Program</option>
+                <option>B.Tech</option>
+                <option>M.Tech</option>
+                <option>MBA</option>
+                <option>BCA</option>
+                <option>MCA</option>
+            </select>
+        </label>
+
+        <label>
+            Semester:
+            <select name="semester" required>
+                <option value="" disabled selected>Select Semester</option>
+                <option>1</option><option>2</option><option>3</option>
+                <option>4</option><option>5</option><option>6</option>
+                <option>7</option><option>8</option>
+            </select>
+        </label>
+
+        <label>
+            Student ID:
+            <input type="text" name="studentId" required>
+        </label>
+
+        <label>
+            Department:
+            <select name="department" required>
+                <option value="" disabled selected>Select Department</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>AIDS</option>
+                <option>Mechanical</option>
+            </select>
+        </label>
+
+        <label>
+            Skills:
+            <select name="skills[]" multiple>
+                <option>Java</option>
+                <option>Python</option>
+                <option>C++</option>
+                <option>JavaScript</option>
+                <option>React</option>
+                <option>SQL</option>
+            </select>
+        </label>
+
+        <label>
+            Upload Resume:
+            <input type="file" name="resume" accept=".pdf,.doc,.docx">
+        </label>
+    </fieldset>
+
+    <!-- Account Information -->
+    <fieldset>
+        <legend>Account Information</legend>
+
+        <label>
+            Username:
+            <input type="text" name="username" required>
+        </label>
+
+        <label>
+            Password:
+            <input type="password" name="password" minlength="6" required>
+        </label>
+
+        <label>
+            Confirm Password:
+            <input type="password" name="confirmPassword" required>
+        </label>
+    </fieldset>
+
+    <!-- Terms -->
+    <label class="checkbox-row">
+        <input type="checkbox" required>
+        I agree to the Terms & Conditions
+    </label>
+
+    <!-- Buttons -->
+    <div class="btn-row">
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+    </div>
+
+</form>
+
+</body>
+</html>
