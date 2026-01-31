@@ -1,0 +1,17 @@
+<h1 id="h1tag">Name</h1>
+<button onclick="Clickme(event)" id="John">John</button>
+<button onclick="Clickme()" id="Hari">Hari</button>
+<button onclick="Clickme()" id="Praveen">Praveen</button>
+<script>
+    var H1=document.getElementById("h1tag");
+    var John=document.getElementsById("John");
+    var Hari=document.getElementsById("Hari");
+    var Praveen=document.getElementsById("Praveen");  //select all  button
+    function Clickme(event){
+        
+            H1.textContent=event.target.textContent;
+        
+        
+
+    }
+</script>

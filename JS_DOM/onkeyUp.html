@@ -1,0 +1,12 @@
+<input id="inputBox" type="text">
+<h1 id="result">h1:</h1>
+<button onkeyup="h1text()">give text to h1</button>
+<script>
+    var value1=document.getElementById("inputBox");
+    var h1=document.getElementById("result");
+    
+    function h1text(){
+        h1.textContent=value1.value;
+    }
+
+</script>

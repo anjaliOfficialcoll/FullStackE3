@@ -1,0 +1,13 @@
+<button onclick="createH1()">Click Hello</button>
+<script>
+    function createH1(){
+        var h1=document.createElement("h1");
+        var div=document.createElement("div");   //create div with id container
+       
+        div.id="container";
+        document.body.appendChild(div);
+        div.appendChild(h1);
+         h1.textContent="Hello";
+    }
+    
+</script>

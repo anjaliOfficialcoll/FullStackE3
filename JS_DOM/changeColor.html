@@ -8,14 +8,18 @@
         height: 100px;
         width:100px;
         background-color: red;
+        transition: 2s;
     }
-    
+    .widthmax{
+        width: 900px;
+    }
 </style>
 <script>
     var box=document.getElementById("box");
     function changeColor(){
         box.style.backgroundColor="blue";
-        box.style.width="200px";
+        //box.style.width="200px";
+        box.setAttribute("class","widthmax");
         
     }
 </script>
