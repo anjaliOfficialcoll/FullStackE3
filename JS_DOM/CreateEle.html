@@ -1,0 +1,20 @@
+<div id="box">
+    <p>good morning</p>
+    <p>good afternoon</p>
+    <p>good night</p>
+</div>
+
+<script>
+    var h1Element=document.createElement("h1");
+    h1Element.id="h1tag";
+    var box=document.getElementById("box");
+    //box.append(h1Element);   //last element
+    //box.prepend(h1Element); //first element
+    
+    h1Element.textContent="hello anjali"; //print on screen
+    h1Element.innerHTML="hello anjali";
+
+    box.insertAdjacentElement("beforeend",h1Element); //after the box div
+    //afterbegin , beforeend, beforebegin
+    console.log(h1Element);
+</script>
