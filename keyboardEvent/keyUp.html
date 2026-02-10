@@ -1,0 +1,16 @@
+
+<input type="text" id="box" placeholder="Type Something"> 
+<p id="msg"></p>
+    <script>
+         document.getElementById("box").addEventListener("keyup",
+    function(event){
+        console.log("key released:"+event.key);
+     });
+     
+     document.getElementById("box").addEventListener("keypress",
+         function(event){
+             alert("you typed:"+event.key);
+         }
+     ) 
+
+    </script>
